@@ -9,7 +9,7 @@
     articlesBlock.addEventListener('click', async function(e){
         if(e.target.classList.contains('edit-btn')){
             id = e.target.parentNode.parentNode.querySelector('.id').value;
-            let postInfo = await fetch('http://localhost:3000/posts/' + id)
+            let postInfo = await fetch('/posts/' + id)
                 .then((response) => response.json())
                 .then((data) => data)
 
@@ -30,7 +30,7 @@
             updateDescription = textArea.value.substring(0, textArea.value.indexOf('.')+1);
         }
         
-        fetch('http://localhost:3000/posts/' + id, {
+        fetch('/posts/' + id, {
             method: 'PUT',
             headers: {
                 'Content-Type' : 'application/json'
