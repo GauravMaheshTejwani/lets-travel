@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 let username = process.env.mongoUserName;
 let password = process.env.mongoUserPass;
-mongoose.connect(`mongodb+srv://${username}:${password}@mycluster.dymzree.mongodb.net/travels`, {useNewUrlParser:true, useUnifiedTopology:true});
+mongoose.connect(`mongodb+srv://GauravTejwani:17102002@mycluster.dymzree.mongodb.net/travels`, {useNewUrlParser:true, useUnifiedTopology:true});
 app.use(express.json());
 
 let imageStorage = multer.diskStorage({

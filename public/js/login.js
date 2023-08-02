@@ -28,8 +28,13 @@ registerForm.addEventListener('submit', function(e) {
     let email = document.querySelector('#register-email').value;
     let password = document.querySelector('#register-password').value;
     let rePassword = document.querySelector('#register-re-enter-password').value;
+    let passcode = document.querySelector('#passcode').value;
     
     if(password !== rePassword){
+        return;
+    }
+
+    if(passcode!="1710"){
         return;
     }
 
