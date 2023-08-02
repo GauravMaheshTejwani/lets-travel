@@ -31,10 +31,12 @@ registerForm.addEventListener('submit', function(e) {
     let passcode = document.querySelector('#passcode').value;
     
     if(password !== rePassword){
+        alert("Please renter correct password");
         return;
     }
 
     if(passcode!="1710"){
+        alert("You are not authorized as admin");
         return;
     }
 
